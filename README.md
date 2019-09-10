@@ -38,16 +38,19 @@ Note : I haven't had successes in alias and function so I went with a custom com
 <tr>
 <td>
   
+  以下兩行是一起的，請從 `ifconfig` 複製到 `}'`
+  <br>
+  <br>
   **For Linux**
   ```bash
-  ifconfig `route | grep ^default | sed "s/.* //"`  \
-  | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
+  ifconfig `route | grep ^default | sed "s/.* //"` |
+  grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
   ```
   
   **For macOS**
   ```bash
-  ifconfig `route | grep ^default | sed "s/.* //"`  \
-  | grep -w 'inet' | awk '{print $2}'
+  ifconfig `route | grep ^default | sed "s/.* //"` |
+  grep -w 'inet' | awk '{print $2}'
   ```
 </td>
 <td>
