@@ -33,14 +33,13 @@ Command Line (Bash/Zsh)
 <br>
 
 ## ip
-Note : I haven't had successes in alias and function so I went with a custom command placed in /usr/local/bin
+在 `/usr/local/bin` 建立了一個名為 `ip` 的檔案（沒有附檔名），然後把指令貼近去、儲存
+<br>
+Note : 以下兩行是一起的，請從 `ifconfig` 複製到 `}'`
 <table>
 <tr>
 <td>
   
-  以下兩行是一起的，請從 `ifconfig` 複製到 `}'`
-  <br>
-  <br>
   **For Linux**
   ```bash
   ifconfig `route | grep ^default | sed "s/.* //"` |
@@ -60,7 +59,7 @@ Note : I haven't had successes in alias and function so I went with a custom com
 <tr>
 <td colspan="2">
 
-  Instead of finding your ip using `ifconfig` while searching through a bunch of extra infos, this simply outputs your ip
+  與其用 `ifconfig` 查 ip 然後再從一大堆資訊裡面挑出來，這個命令就單純只會印出你的 ip
 </td>
 </tr>
 </table>
