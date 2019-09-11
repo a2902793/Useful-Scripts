@@ -32,7 +32,7 @@ Command Line (Bash/Zsh)
 
 <br>
 
-## ip
+## ipv4
 1. 在 `/usr/local/bin` 建立了一個名為 `ip` 的檔案（沒有附檔名）
 
     ```shell
