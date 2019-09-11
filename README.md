@@ -62,7 +62,7 @@ Command Line (Bash/Zsh)
   ```
 </td>
 <td>
-<img src="/images/ip.png"</img>
+<img src="/images/ipv4.png"</img>
 </td>
 </tr>
 <tr>
