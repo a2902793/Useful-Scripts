@@ -33,21 +33,30 @@ Command Line (Bash/Zsh)
 <br>
 
 ## ip
-在 `/usr/local/bin` 建立了一個名為 `ip` 的檔案（沒有附檔名），然後把指令貼近去、儲存
+1. 在 `/usr/local/bin` 建立了一個名為 `ip` 的檔案（沒有附檔名）
+
+    ```shell
+    sudo nano /usr/local/bin/ipv4
+    ```
+2. 然後把指令貼近去、儲存
+3. 提供權限
+
+    ```shell
+    chmod +x /usr/local/bin/ipv4
+    ```
 <br>
-Note : 以下兩行是一起的，請從 `ifconfig` 複製到 `}'`
 <table>
 <tr>
 <td>
   
   **For Linux**
-  ```bash
+  ```shell
   ifconfig `route | grep ^default | sed "s/.* //"` |
   grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
   ```
   
   **For macOS**
-  ```bash
+  ```shell
   ifconfig `route | grep ^default | sed "s/.* //"` |
   grep -w 'inet' | awk '{print $2}'
   ```
