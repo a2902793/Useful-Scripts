@@ -33,7 +33,7 @@ Command Line (Bash/Zsh)
 <br>
 
 ## ipv4
-1. 在 `/usr/local/bin` 建立了一個名為 `ip` 的檔案（沒有附檔名）
+1. 在 `/usr/local/bin` 建立了一個名為 `ipv4` 的檔案（沒有附檔名）
 
     ```shell
     sudo nano /usr/local/bin/ipv4
@@ -55,7 +55,7 @@ Command Line (Bash/Zsh)
   grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
   ```
   
-  **For macOS**
+  **For macOS, Raspberry Pi**
   ```shell
   ifconfig `route | grep ^default | sed "s/.* //"` |
   grep -w 'inet' | awk '{print $2}'
