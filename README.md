@@ -42,23 +42,25 @@ Command Line (Bash/Zsh)
 3. 提供權限
 
     ```shell
-    chmod +x /usr/local/bin/ipv4
+    sudo chmod +x /usr/local/bin/ipv4
     ```
 <br>
 <table>
 <tr>
 <td>
   
-  **For Linux**
-  ```shell
-  ifconfig `route | grep ^default | sed "s/.* //"` |
-  grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
-  ```
+  用 `ifconfig` 確認 ip 前面是 `inet` 還是 `inet addr`
   
-  **For macOS, Raspberry Pi**
+  **inet (Ex: Ubuntu, macOS, Raspberry Pi...)**
   ```shell
   ifconfig `route | grep ^default | sed "s/.* //"` |
   grep -w 'inet' | awk '{print $2}'
+  ```
+  
+  **inet addr**
+  ```shell
+  ifconfig `route | grep ^default | sed "s/.* //"` |
+  grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
   ```
 </td>
 <td>
