@@ -54,7 +54,7 @@ Command Line (Bash/Zsh)
   **inet (Ex: Ubuntu, macOS, Raspberry Pi...)**
   ```shell
   ifconfig `route | grep ^default | sed "s/.* //"` |
-  grep -w 'inet' | awk '{print $2}'
+  grep -m 1 -w 'inet' | awk '{print $2}'
   ```
   
   **inet addr**
