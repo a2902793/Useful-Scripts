@@ -25,7 +25,7 @@ Command Line (Bash/Zsh)
 <tr>
 <td colspan="2">
 
-  可以把repo抓下來後自動 `cd` 進去
+  【功能】 可以把repo抓下來後自動 `cd` 進去
 </td>
 </tr>
 </table>
@@ -70,7 +70,7 @@ Command Line (Bash/Zsh)
 <tr>
 <td colspan="2">
 
-  與其用 `ifconfig` 查 ip 然後再從一大堆資訊裡面挑出來，這個命令就單純只會印出你的 ip
+  【功能】 與其用 `ifconfig` 查 ip 然後再從一大堆資訊裡面挑出來，這個命令就單純只會印出你的 ip
 </td>
 </tr>
 </table>
